@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <a href="#/">Main</a>
+  <a href="#/second">Second</a>
+  <div class="container">
+
+      <!-- <div ng-controller="mainController"></div> -->
+
+
+      <!--
+        当JS根据不同的hash值来异步加载不同的template过来
+        当把template加载过来的时候
+        就把 <div ng-viw></div>
+        里面的内容替换成加载过来的template的内容
+      -->
+      <div ng-view>
+        <!-- 这里放template的内容 -->
+      </div>
+
+  </div>
+  <script src="js/angular.js"></script>
+  <script src="js/angular-route.js"></script>
+  <script src="js/0503routingTemplatesAndControllers.js"></script>
+</body>
+</html>

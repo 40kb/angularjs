@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="container">
+
+    <div ng-controller="mainController">
+      <h1>hello world!</h1>
+    </div>
+
+    <form name="myForm">
+      <label>
+        Enter text:
+        <input type="text" ng-model="field" name="myField" required minlength="5" />
+      </label>
+      <div ng-messages="myForm.myField.$error" role="alert">
+        <div ng-message="required">You did not enter a field</div>
+        <div ng-message="minlength, maxlength">
+          Your email must be between 5 and 100 characters long
+        </div>
+      </div>
+    </form>
+
+  </div>
+
+  <script src="js/angular.js"></script>
+  <script src="js/angular-messages.js"></script>
+  <script src="js/angular-resource.js"></script>
+  <script src="js/app2.js"></script>
+</body>
+</html>

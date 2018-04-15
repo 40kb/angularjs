@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+
+  <div ng-controller="mainController">
+    <label for="">What is your twitter handle?</label>
+    <input type="text" ng-model="handle">
+
+    <!-- demo ng-if -->
+    <div class="alert" ng-if="handle.length !== characters">
+      Must be 5 characters!
+    </div>
+
+    <!-- demo ng-show -->
+    <div class="alert" ng-class={ 'warning': handle.length < characters, 'error': handle.lenght === characters } ng-show="handle.length === characters">
+      Show when equal 5 characters!
+
+      <!-- demo 你可以用directive在DOM的任何地方 -->
+      <div ng-show="handle.length < characters">
+        you have less than 5 characters!
+      </div>
+      <!-- 同样可以在directive里面内嵌directive -->
+      <div ng-show="handle.length > characters">
+        you have more than 5 characters!
+      </div>
+
+    </div>
+
+    <!-- demo ng-class -->
+    <div class="alert" ng-show="handle.length === characters">
+      Show when equal 5 characters!
+    </div>
+
+    <!-- demo ng-repeat -->
+    <h3>Rules</h3>
+    <ul>
+      <li ng-repeat="rule in rules">
+        {{ rule.rulename }}
+      </li>
+    </ul>
+
+    <!-- demo ng-click="function，当你click的时候就会运行这个function"
+         这个函数定义在你对应controller里面的$scope object里面
+    -->
+    <input type="button" value="Click me" ng-click="alertClick()">
+
+
+    <!-- demo ng-cloak -->
+    <div> {{ name }} </div>
+
+
+    <h1>twitter.com/{{ handle }}</h1>
+    <br>
+    <h1>twitter.com/{{ lowercasehandle() }}</h1>
+  </div>
+
+  <script src="js/angular.js"></script>
+  <script src="js/0406theXMLHTTPRequestObject.js"></script>
+</body>
+</html>

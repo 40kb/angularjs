@@ -1,0 +1,57 @@
+<label>Search</label>
+<input type="text" value="Doe">
+
+<h3>Search Results</h3>
+<div class="list-group">
+
+  <!--
+    当angular看见<search-result>
+    会normalization之后
+    去找searchResult这个名字
+   -->
+  <search-result></search-result>
+  <search-result></search-result>
+  <search-result></search-result>
+  <search-result></search-result>
+  <!--
+    当我查看我的html的时候看到<search-result>
+    知道它是代表一个search result
+    可以保持了HTML的整洁，而且很好的实现重用
+
+    BTW: web components的写法也是未来的趋势
+   -->
+
+
+  <!-- angular还支持custom attribute的方式 -->
+  <div search-result></div>
+</div>
+
+<br>
+<hr>
+<br>
+
+<!--
+<div class="list-group">
+
+  <a href="#" class="list-group-item">
+    <h4 class="list-group-item-heading">Doe, John</h4>
+    <p class="list-group-item-text">
+      555 Main St., New York, NY 11111
+    </p>
+  </a>
+
+  <a href="#" class="list-group-item">
+    <h4 class="list-group-item-heading">Doe, John</h4>
+    <p class="list-group-item-text">
+      555 Main St., New York, NY 11111
+    </p>
+  </a>
+
+  <a href="#" class="list-group-item">
+    <h4 class="list-group-item-heading">Doe, John</h4>
+    <p class="list-group-item-text">
+      555 Main St., New York, NY 11111
+    </p>
+  </a>
+</div>
+ -->

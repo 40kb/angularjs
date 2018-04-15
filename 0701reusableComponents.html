@@ -1,0 +1,58 @@
+<!-- // web components -->
+
+<!--
+  假若你有一小片段的UI
+  在做搜索结果的时候要输出每个search结果
+-->
+<h1>Search Results</h1>
+<div>
+  <h2>title</h2>
+  <p>detail</p>
+  <a href="#">...more detail</a>
+</div>
+<div>
+  <h2>title</h2>
+  <p>detail</p>
+  <a href="#">...more detail</a>
+</div>
+<div>
+  <h2>title</h2>
+  <p>detail</p>
+  <a href="#">...more detail</a>
+</div>
+<div>
+  <h2>title</h2>
+  <p>detail</p>
+  <a href="#">...more detail</a>
+</div>
+
+<!-- 那单纯的用html不可以吗?
+  当然是可以的!
+  就是你要把这些<tags>全部都写出来像
+  <div>
+    <h2>title</h2>
+    <p>detail</p>
+    <a href="#">...more detail</a>
+  </div>
+ -->
+
+
+<!-- 那有没有一种办法说，告诉browser说这是一个搜索结果 -->
+<!-- 类似这样 -->
+<searchResult more-detail="#"></searchResult>
+<!-- 或这样 -->
+<div searchResult></div>
+<!-- 或这样 -->
+<div class="searchResult"></div>
+
+<!-- 注意的话
+所搜出来的结果就变成了（上面的一小片UI就变成了）
+ -->
+<searchResult more-detail="#"></searchResult>
+<searchResult more-detail="#"></searchResult>
+<searchResult more-detail="#"></searchResult>
+<searchResult more-detail="#"></searchResult>
+<searchResult more-detail="#"></searchResult>
+
+
+<!-- angular提供了这种方式给我们，叫做custom directive -->
